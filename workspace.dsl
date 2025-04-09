@@ -18,8 +18,16 @@ workspace {
                     technology "Spring MVC"
                     tags "Controller"
                 }
+                component5 = component "Registration Controller" {
+                    description "handles registration requests"
+                    technology  "Spring MVC"
+                }
+                component6 = component "Registration Service" {
+                    description "Handles user registration"
+                    technology "Java Service"
+                }
 
-                component2 = component "User Service" {
+                component2 = component "User Login Service" {
                     description "Handles user authentication and management"
                     technology "Java Service"
                 }
@@ -29,22 +37,28 @@ workspace {
                     technology "Spring Data JPA"
                 }
 
+                component4 = component "database" {
+                    description "Stores user data"
+                    technology "PostgreSQL"
+                }
+
                 component1 -> component2 "Validates user credentials"
                 component2 -> component3 "Fetches user data"
+                component3 -> component4 "Reads data from"
+                component1 -> component5 "Registers new users"
+                component5 -> component6 "Handles registration logic"
+                component6 -> component4 "Stores user data"
+
+                
             }
 
-            database = container "Database" {
-                description "Stores user data"
-                technology "PostgreSQL"
-            }
-
-            webapp -> database "Reads from and writes to"
         }
 
         // Relationships
         user -> softwareSystem1 "Uses"
         user -> softwareSystem1.webapp "Interacts with"
         user -> softwareSystem1.webapp.component1 "Logs in via"
+
     }
 
 
@@ -64,6 +78,7 @@ workspace {
             include *
             autolayout lr
         }
+        
 
             styles {
             element "Person" {
