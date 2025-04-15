@@ -1,0 +1,339 @@
+{
+  "configuration" : { },
+  "description" : "Spring Boot + MySQL",
+  "documentation" : { },
+  "id" : 0,
+  "model" : {
+    "people" : [ {
+      "description" : "Uses the application",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "User",
+      "relationships" : [ {
+        "description" : "Uses",
+        "destinationId" : "3",
+        "id" : "4",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "19",
+        "id" : "23",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "18",
+        "id" : "24",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "17",
+        "id" : "25",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "containers" : [ {
+        "components" : [ {
+          "documentation" : { },
+          "id" : "5",
+          "name" : "Chat Repository",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.repositories.chats.ChatRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "6",
+          "name" : "Group Chat Repository",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.repositories.chats.GroupChatRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "7",
+          "name" : "Friendship Repository",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.repositories.friendships.FriendshipRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "8",
+          "name" : "Message Repository",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.repositories.messages.MessageRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "9",
+          "name" : "Profile Repository",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.repositories.profiles.ProfileRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "10",
+          "name" : "Session Repository",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.repositories.sessions.SessionRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "11",
+          "name" : "User Repository",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.repositories.users.UserRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "12",
+          "name" : "I User Details Service",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.services.auth.IUserDetailsService"
+          },
+          "tags" : "Element,Component,Spring Service",
+          "technology" : "Spring Service"
+        }, {
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Message Service",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.services.message.MessageService"
+          },
+          "tags" : "Element,Component,Spring Service",
+          "technology" : "Spring Service"
+        }, {
+          "documentation" : { },
+          "id" : "14",
+          "name" : "Message Queue Service",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.services.messageQueue.MessageQueueService"
+          },
+          "tags" : "Element,Component,Spring Service",
+          "technology" : "Spring Service"
+        }, {
+          "documentation" : { },
+          "id" : "15",
+          "name" : "Session Management Service",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.services.session.SessionManagementService"
+          },
+          "tags" : "Element,Component,Spring Service",
+          "technology" : "Spring Service"
+        }, {
+          "documentation" : { },
+          "id" : "16",
+          "name" : "User Service",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.services.user.UserService"
+          },
+          "tags" : "Element,Component,Spring Service",
+          "technology" : "Spring Service"
+        }, {
+          "documentation" : { },
+          "id" : "17",
+          "name" : "Authentication Controller",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.controller.auth.AuthenticationController"
+          },
+          "relationships" : [ {
+            "destinationId" : "16",
+            "id" : "20",
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
+        }, {
+          "documentation" : { },
+          "id" : "18",
+          "name" : "Chat Controller",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.controller.chat.ChatController"
+          },
+          "relationships" : [ {
+            "destinationId" : "13",
+            "id" : "21",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
+        }, {
+          "documentation" : { },
+          "id" : "19",
+          "name" : "Registration Controller",
+          "properties" : {
+            "component.type" : "com.example.springchatserver.controller.registration.RegistrationController"
+          },
+          "relationships" : [ {
+            "destinationId" : "12",
+            "id" : "22",
+            "sourceId" : "19",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
+        } ],
+        "description" : "Spring Boot App",
+        "documentation" : { },
+        "id" : "3",
+        "name" : "Web Application",
+        "tags" : "Element,Container",
+        "technology" : "Java"
+      } ],
+      "description" : "Generated C4 model",
+      "documentation" : { },
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Spring Boot App",
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "C4 Model",
+  "views" : {
+    "componentViews" : [ {
+      "containerId" : "3",
+      "description" : "Component view",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "9",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "components",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "20"
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "23"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "25"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "background" : "#08427b",
+          "color" : "#ffffff",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#85bb65",
+          "color" : "#ffffff",
+          "shape" : "Hexagon",
+          "tag" : "Component"
+        }, {
+          "background" : "#f5da55",
+          "color" : "#000000",
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        } ]
+      },
+      "terminology" : { }
+    },
+    "containerViews" : [ {
+      "description" : "Container view",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "containers",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "4"
+      } ],
+      "softwareSystemId" : "2"
+    } ]
+  }
+}

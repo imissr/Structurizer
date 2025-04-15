@@ -1,35 +1,56 @@
 {
   "configuration" : { },
-  "description" : "Description",
+  "description" : "Spring Boot + MySQL",
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2025-04-09T10:43:39Z",
+  "lastModifiedDate" : "2025-04-15T16:51:55Z",
   "model" : {
     "people" : [ {
-      "description" : "A user of the system",
+      "description" : "Uses the application",
       "id" : "1",
       "location" : "Unspecified",
-      "name" : "Client User",
-      "properties" : {
-        "structurizr.dsl.identifier" : "user"
-      },
+      "name" : "User",
       "relationships" : [ {
         "description" : "Uses",
-        "destinationId" : "2",
-        "id" : "16",
+        "destinationId" : "3",
+        "id" : "4",
         "sourceId" : "1",
         "tags" : "Relationship"
       }, {
-        "description" : "Interacts with",
-        "destinationId" : "3",
+        "description" : "Uses",
+        "destinationId" : "8",
         "id" : "17",
         "sourceId" : "1",
         "tags" : "Relationship"
       }, {
-        "description" : "Logs in via",
-        "destinationId" : "4",
+        "description" : "Uses",
+        "destinationId" : "10",
         "id" : "18",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "5",
+        "id" : "19",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "7",
+        "id" : "20",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "9",
+        "id" : "21",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "6",
+        "id" : "22",
         "sourceId" : "1",
         "tags" : "Relationship"
       } ],
@@ -38,200 +59,191 @@
     "softwareSystems" : [ {
       "containers" : [ {
         "components" : [ {
-          "description" : "Handles login requests",
-          "documentation" : { },
-          "id" : "4",
-          "name" : "Login Controller",
-          "properties" : {
-            "structurizr.dsl.identifier" : "softwaresystem1.webapp.component1"
-          },
-          "relationships" : [ {
-            "description" : "Validates user credentials",
-            "destinationId" : "7",
-            "id" : "10",
-            "sourceId" : "4",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Registers new users",
-            "destinationId" : "5",
-            "id" : "13",
-            "sourceId" : "4",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component,Controller",
-          "technology" : "Spring MVC"
-        }, {
-          "description" : "handles registration requests",
           "documentation" : { },
           "id" : "5",
-          "name" : "Registration Controller",
+          "name" : "Owner Controller",
           "properties" : {
-            "structurizr.dsl.identifier" : "softwaresystem1.webapp.component5"
+            "component.type" : "org.springframework.samples.petclinic.owner.OwnerController"
           },
           "relationships" : [ {
-            "description" : "Handles registration logic",
-            "destinationId" : "6",
-            "id" : "14",
+            "destinationId" : "11",
+            "id" : "13",
             "sourceId" : "5",
             "tags" : "Relationship"
           } ],
-          "tags" : "Element,Component",
-          "technology" : "Spring MVC"
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
         }, {
-          "description" : "Handles user registration",
           "documentation" : { },
           "id" : "6",
-          "name" : "Registration Service",
+          "name" : "Pet Controller",
           "properties" : {
-            "structurizr.dsl.identifier" : "softwaresystem1.webapp.component6"
+            "component.type" : "org.springframework.samples.petclinic.owner.PetController"
           },
           "relationships" : [ {
-            "description" : "Stores user data",
-            "destinationId" : "9",
-            "id" : "15",
+            "destinationId" : "11",
+            "id" : "14",
             "sourceId" : "6",
             "tags" : "Relationship"
           } ],
-          "tags" : "Element,Component",
-          "technology" : "Java Service"
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
         }, {
-          "description" : "Handles user authentication and management",
           "documentation" : { },
           "id" : "7",
-          "name" : "User Login Service",
+          "name" : "Visit Controller",
           "properties" : {
-            "structurizr.dsl.identifier" : "softwaresystem1.webapp.component2"
+            "component.type" : "org.springframework.samples.petclinic.owner.VisitController"
           },
           "relationships" : [ {
-            "description" : "Fetches user data",
-            "destinationId" : "8",
-            "id" : "11",
+            "destinationId" : "11",
+            "id" : "15",
             "sourceId" : "7",
             "tags" : "Relationship"
           } ],
-          "tags" : "Element,Component",
-          "technology" : "Java Service"
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
         }, {
-          "description" : "Handles user data storage and retrieval",
           "documentation" : { },
           "id" : "8",
-          "name" : "User Repository",
+          "name" : "Crash Controller",
           "properties" : {
-            "structurizr.dsl.identifier" : "softwaresystem1.webapp.component3"
+            "component.type" : "org.springframework.samples.petclinic.system.CrashController"
           },
-          "relationships" : [ {
-            "description" : "Reads data from",
-            "destinationId" : "9",
-            "id" : "12",
-            "sourceId" : "8",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component",
-          "technology" : "Spring Data JPA"
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
         }, {
-          "description" : "Stores user data",
           "documentation" : { },
           "id" : "9",
-          "name" : "database",
+          "name" : "Welcome Controller",
           "properties" : {
-            "structurizr.dsl.identifier" : "softwaresystem1.webapp.component4"
+            "component.type" : "org.springframework.samples.petclinic.system.WelcomeController"
           },
-          "tags" : "Element,Component",
-          "technology" : "PostgreSQL"
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
+        }, {
+          "documentation" : { },
+          "id" : "10",
+          "name" : "Vet Controller",
+          "properties" : {
+            "component.type" : "org.springframework.samples.petclinic.vet.VetController"
+          },
+          "relationships" : [ {
+            "destinationId" : "12",
+            "id" : "16",
+            "sourceId" : "10",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component,Spring MVC Controller",
+          "technology" : "Spring MVC Controller"
+        }, {
+          "documentation" : { },
+          "id" : "11",
+          "name" : "Owner Repository",
+          "properties" : {
+            "component.type" : "org.springframework.samples.petclinic.owner.OwnerRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
+        }, {
+          "documentation" : { },
+          "id" : "12",
+          "name" : "Vet Repository",
+          "properties" : {
+            "component.type" : "org.springframework.samples.petclinic.vet.VetRepository"
+          },
+          "tags" : "Element,Component,Spring Data Repository",
+          "technology" : "Spring Data Repository"
         } ],
-        "description" : "Allows users to interact with the system",
+        "description" : "Spring Boot App",
         "documentation" : { },
         "id" : "3",
         "name" : "Web Application",
-        "properties" : {
-          "structurizr.dsl.identifier" : "softwaresystem1.webapp"
-        },
         "tags" : "Element,Container",
-        "technology" : "Java + Spring Boot"
+        "technology" : "Java"
       } ],
-      "description" : "An example system to demonstrate C4 model using Structurizr",
+      "description" : "Generated C4 model",
       "documentation" : { },
       "id" : "2",
       "location" : "Unspecified",
-      "name" : "My Software System",
-      "properties" : {
-        "structurizr.dsl.identifier" : "softwaresystem1"
-      },
+      "name" : "Spring Boot App",
       "tags" : "Element,Software System"
     } ]
   },
-  "name" : "Name",
-  "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgICFpZGVudGlmaWVycyBoaWVyYXJjaGljYWwKCiAgICBtb2RlbCB7CiAgICAgICAgdXNlciA9IHBlcnNvbiAiQ2xpZW50IFVzZXIiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIkEgdXNlciBvZiB0aGUgc3lzdGVtIgogICAgICAgIH0KCiAgICAgICAgc29mdHdhcmVTeXN0ZW0xID0gc29mdHdhcmVTeXN0ZW0gIk15IFNvZnR3YXJlIFN5c3RlbSIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiQW4gZXhhbXBsZSBzeXN0ZW0gdG8gZGVtb25zdHJhdGUgQzQgbW9kZWwgdXNpbmcgU3RydWN0dXJpenIiCgogICAgICAgICAgICB3ZWJhcHAgPSBjb250YWluZXIgIldlYiBBcHBsaWNhdGlvbiIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkFsbG93cyB1c2VycyB0byBpbnRlcmFjdCB3aXRoIHRoZSBzeXN0ZW0iCiAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJKYXZhICsgU3ByaW5nIEJvb3QiCgogICAgICAgICAgICAgICAgY29tcG9uZW50MSA9IGNvbXBvbmVudCAiTG9naW4gQ29udHJvbGxlciIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJIYW5kbGVzIGxvZ2luIHJlcXVlc3RzIgogICAgICAgICAgICAgICAgICAgIHRlY2hub2xvZ3kgIlNwcmluZyBNVkMiCiAgICAgICAgICAgICAgICAgICAgdGFncyAiQ29udHJvbGxlciIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGNvbXBvbmVudDUgPSBjb21wb25lbnQgIlJlZ2lzdHJhdGlvbiBDb250cm9sbGVyIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gImhhbmRsZXMgcmVnaXN0cmF0aW9uIHJlcXVlc3RzIgogICAgICAgICAgICAgICAgICAgIHRlY2hub2xvZ3kgICJTcHJpbmcgTVZDIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgY29tcG9uZW50NiA9IGNvbXBvbmVudCAiUmVnaXN0cmF0aW9uIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSGFuZGxlcyB1c2VyIHJlZ2lzdHJhdGlvbiIKICAgICAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJKYXZhIFNlcnZpY2UiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29tcG9uZW50MiA9IGNvbXBvbmVudCAiVXNlciBMb2dpbiBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkhhbmRsZXMgdXNlciBhdXRoZW50aWNhdGlvbiBhbmQgbWFuYWdlbWVudCIKICAgICAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJKYXZhIFNlcnZpY2UiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29tcG9uZW50MyA9IGNvbXBvbmVudCAiVXNlciBSZXBvc2l0b3J5IiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkhhbmRsZXMgdXNlciBkYXRhIHN0b3JhZ2UgYW5kIHJldHJpZXZhbCIKICAgICAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJTcHJpbmcgRGF0YSBKUEEiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29tcG9uZW50NCA9IGNvbXBvbmVudCAiZGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU3RvcmVzIHVzZXIgZGF0YSIKICAgICAgICAgICAgICAgICAgICB0ZWNobm9sb2d5ICJQb3N0Z3JlU1FMIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGNvbXBvbmVudDEgLT4gY29tcG9uZW50MiAiVmFsaWRhdGVzIHVzZXIgY3JlZGVudGlhbHMiCiAgICAgICAgICAgICAgICBjb21wb25lbnQyIC0+IGNvbXBvbmVudDMgIkZldGNoZXMgdXNlciBkYXRhIgogICAgICAgICAgICAgICAgY29tcG9uZW50MyAtPiBjb21wb25lbnQ0ICJSZWFkcyBkYXRhIGZyb20iCiAgICAgICAgICAgICAgICBjb21wb25lbnQxIC0+IGNvbXBvbmVudDUgIlJlZ2lzdGVycyBuZXcgdXNlcnMiCiAgICAgICAgICAgICAgICBjb21wb25lbnQ1IC0+IGNvbXBvbmVudDYgIkhhbmRsZXMgcmVnaXN0cmF0aW9uIGxvZ2ljIgogICAgICAgICAgICAgICAgY29tcG9uZW50NiAtPiBjb21wb25lbnQ0ICJTdG9yZXMgdXNlciBkYXRhIgoKICAgICAgICAgICAgICAgIAogICAgICAgICAgICB9CgogICAgICAgIH0KCiAgICAgICAgLy8gUmVsYXRpb25zaGlwcwogICAgICAgIHVzZXIgLT4gc29mdHdhcmVTeXN0ZW0xICJVc2VzIgogICAgICAgIHVzZXIgLT4gc29mdHdhcmVTeXN0ZW0xLndlYmFwcCAiSW50ZXJhY3RzIHdpdGgiCiAgICAgICAgdXNlciAtPiBzb2Z0d2FyZVN5c3RlbTEud2ViYXBwLmNvbXBvbmVudDEgIkxvZ3MgaW4gdmlhIgoKICAgIH0KCgoKICAgIHZpZXdzIHsKICAgICAgICBzeXN0ZW1Db250ZXh0IHNvZnR3YXJlU3lzdGVtMSB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgc29mdHdhcmVTeXN0ZW0xIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBzb2Z0d2FyZVN5c3RlbTEud2ViYXBwIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgICB9CiAgICAgICAgCgogICAgICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIHBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDg0MjdiCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGVsZW1lbnQgIlNvZnR3YXJlIFN5c3RlbSIgewogICAgICAgICAgICAgICAgc2hhcGUgcm91bmRlZGJveAogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE2OGJkCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGVsZW1lbnQgIkNvbnRhaW5lciIgewogICAgICAgICAgICAgICAgc2hhcGUgYm94CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM0MzhkZDUKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiQ29tcG9uZW50IiB7CiAgICAgICAgICAgICAgICBzaGFwZSBoZXhhZ29uCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM4NWJiNjUKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIHNoYXBlIGN5bGluZGVyCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICNmNWRhNTUKICAgICAgICAgICAgICAgIGNvbG9yICMwMDAwMDAKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgdGhlbWUgZGVmYXVsdAogICAgfQp9"
-  },
+  "name" : "C4 Model",
   "views" : {
     "componentViews" : [ {
-      "automaticLayout" : {
-        "applied" : true,
-        "edgeSeparation" : 0,
-        "implementation" : "Graphviz",
-        "nodeSeparation" : 300,
-        "rankDirection" : "LeftRight",
-        "rankSeparation" : 300,
-        "vertices" : false
-      },
       "containerId" : "3",
+      "description" : "Component view",
       "dimensions" : {
-        "height" : 1500,
-        "width" : 3820
+        "height" : 2848,
+        "width" : 3580
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 200,
-        "y" : 435
-      }, {
-        "id" : "4",
-        "x" : 900,
-        "y" : 485
+        "x" : 210,
+        "y" : 330
       }, {
         "id" : "5",
-        "x" : 1650,
-        "y" : 785
+        "x" : 1975,
+        "y" : 670
       }, {
         "id" : "6",
-        "x" : 2400,
-        "y" : 785
+        "x" : 1885,
+        "y" : 100
       }, {
         "id" : "7",
-        "x" : 1650,
-        "y" : 185
+        "x" : 2020,
+        "y" : 1250
       }, {
         "id" : "8",
-        "x" : 2400,
-        "y" : 185
+        "x" : 2065,
+        "y" : 2330
       }, {
         "id" : "9",
-        "x" : 3150,
-        "y" : 485
+        "x" : 1205,
+        "y" : 2275
+      }, {
+        "id" : "10",
+        "x" : 2035,
+        "y" : 1775
+      }, {
+        "id" : "11",
+        "x" : 3095,
+        "y" : 510
+      }, {
+        "id" : "12",
+        "x" : 2985,
+        "y" : 1720
       } ],
       "externalContainerBoundariesVisible" : false,
-      "generatedKey" : true,
-      "key" : "Component-001",
-      "order" : 3,
+      "key" : "components",
+      "order" : 2,
       "relationships" : [ {
-        "id" : "10"
-      }, {
-        "id" : "11"
-      }, {
-        "id" : "12"
-      }, {
         "id" : "13"
       }, {
         "id" : "14"
       }, {
         "id" : "15"
       }, {
+        "id" : "16"
+      }, {
+        "id" : "17"
+      }, {
         "id" : "18"
+      }, {
+        "id" : "19"
+      }, {
+        "id" : "20"
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "22"
       } ]
     } ],
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "Component-001",
+      "lastSavedView" : "components",
       "metadataSymbols" : "SquareBrackets",
       "styles" : {
         "elements" : [ {
@@ -239,16 +251,6 @@
           "color" : "#ffffff",
           "shape" : "Person",
           "tag" : "Person"
-        }, {
-          "background" : "#1168bd",
-          "color" : "#ffffff",
-          "shape" : "RoundedBox",
-          "tag" : "Software System"
-        }, {
-          "background" : "#438dd5",
-          "color" : "#ffffff",
-          "shape" : "Box",
-          "tag" : "Container"
         }, {
           "background" : "#85bb65",
           "color" : "#ffffff",
@@ -261,66 +263,29 @@
           "tag" : "Database"
         } ]
       },
-      "terminology" : { },
-      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+      "terminology" : { }
     },
     "containerViews" : [ {
-      "automaticLayout" : {
-        "applied" : true,
-        "edgeSeparation" : 0,
-        "implementation" : "Graphviz",
-        "nodeSeparation" : 300,
-        "rankDirection" : "LeftRight",
-        "rankSeparation" : 300,
-        "vertices" : false
-      },
+      "description" : "Container view",
       "dimensions" : {
-        "height" : 841,
-        "width" : 1570
+        "height" : 1748,
+        "width" : 2480
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 200,
-        "y" : 165
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "3",
-        "x" : 900,
-        "y" : 215
+        "x" : 1250,
+        "y" : 35
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
-      "generatedKey" : true,
-      "key" : "Container-001",
-      "order" : 2,
-      "relationships" : [ {
-        "id" : "17"
-      } ],
-      "softwareSystemId" : "2"
-    } ],
-    "systemContextViews" : [ {
-      "automaticLayout" : {
-        "applied" : false,
-        "edgeSeparation" : 0,
-        "implementation" : "Graphviz",
-        "nodeSeparation" : 300,
-        "rankDirection" : "LeftRight",
-        "rankSeparation" : 300,
-        "vertices" : false
-      },
-      "elements" : [ {
-        "id" : "1",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "2",
-        "x" : 0,
-        "y" : 0
-      } ],
-      "enterpriseBoundaryVisible" : true,
-      "generatedKey" : true,
-      "key" : "SystemContext-001",
+      "key" : "containers",
       "order" : 1,
+      "paperSize" : "A5_Landscape",
       "relationships" : [ {
-        "id" : "16"
+        "id" : "4"
       } ],
       "softwareSystemId" : "2"
     } ]
