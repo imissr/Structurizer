@@ -141,25 +141,15 @@ Structurizr kann viele Beziehungen erkennen – **aber nicht alle**.
 Das sieht man auch in meiner Modellierung des **Chatserver-Projekts**:  
 Die Beziehung zwischen den `Repository`- und `Service`-Klassen wurde **nicht automatisch erkannt**.
 
+**Das Petclinic-Beispiel wurde gut modelliert, da es sich um ein einfaches Projekt handelt**
+
+
 **Manuelle Ergänzungen durch Entwickler sind notwendig**, besonders bei komplexen oder indirekten Abhängigkeiten.
 
 
+
+
 ---
-
-### Fazit
-
-Structurizr ist besonders dann **nützlich**, wenn die Codebasis sehr groß ist und das manuelle Modellieren zu viel Zeit kosten würde.  
-Wenn man die Architektur und wichtigsten Komponenten einmal verstanden hat, kann der **Component Finder gezielt eingesetzt werden**, um effizient ein Grundmodell zu erstellen und es bei Bedarf zu erweitern.
-
-
-
-
-
-
-
-
-
-
 
 
 
