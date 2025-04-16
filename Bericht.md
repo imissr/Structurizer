@@ -147,9 +147,18 @@ Die Beziehung zwischen den `Repository`- und `Service`-Klassen wurde **nicht aut
 **Manuelle Ergänzungen durch Entwickler sind notwendig**, besonders bei komplexen oder indirekten Abhängigkeiten.
 
 
-
-
 ---
+
+### Was erkennt der `ComponentFinder`?
+
+Der `ComponentFinder` erkennt **keine expliziten Beziehungen** (wie `uses(...)`) zwischen Komponenten.  
+Stattdessen erkennt er **Verbindungen zwischen Klassen**, also welche Klassen andere verwenden – z. B. wenn ein `Controller` ein `Repository` über den Konstruktor oder ein Feld nutzt.
+
+Diese Verbindungen werden intern als **referenzierte Typen (`referencedTypes`)** gespeichert.  
+Wenn sowohl die Quell- als auch die Zielklasse als **Komponenten erkannt** wurden, kann man daraus **manuell `uses(...)`-Beziehungen** erzeugen.
+
+Das bedeutet: Wenn der `ComponentFinder` eine Klasse als Komponente erkennt (z. B. einen Controller), analysiert er zusätzlich, **welche anderen Klassen von dieser Komponente verwendet werden**.
+
 
 
 
