@@ -160,6 +160,11 @@ Wenn sowohl die Quell- als auch die Zielklasse als **Komponenten erkannt** wurde
 Das bedeutet: Wenn der `ComponentFinder` eine Klasse als Komponente erkennt (z. B. einen Controller), analysiert er zusätzlich, **welche anderen Klassen von dieser Komponente verwendet werden**.
 
 
+## Wäre es sinnvoll, ein größeres Projekt zu implementieren und zu prüfen, ob ComponentFinder funktioniert und das C4‑Modell automatisch erstellt wird bzw. ob es nutzbar ist?
+
+- Idee: Einen Microservice auswählen und testen, ob Structrizer funktioniert.
+- Ein Spring‑Plugin verwenden, um C4‑Modelle zu erstellen.
+- C4ibterflow mit Structrizer und dem Spring‑Plugin vergleichen 
 
 
 ## Fazit
