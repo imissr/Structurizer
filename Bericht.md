@@ -7,9 +7,9 @@ Der **Component Finder** ist ein Modul der [Structurizr for Java](https://docs.s
 
 ---
 
-## Beispiel: BetClinic
+## Beispiel: PetClinic
 
-In einem Java-Projekt wie **BetClinic** kann man den Component Finder verwenden, um automatisch die wichtigsten Komponenten im Anwendungscode zu identifizieren.
+In einem Java-Projekt wie **PetClinic** kann man den Component Finder verwenden, um automatisch die wichtigsten Komponenten im Anwendungscode zu identifizieren.
 
 ### Wichtige Codeausschnitte(com.structurizr.component)
 
