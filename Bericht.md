@@ -178,28 +178,94 @@ Vorteile der Verwendung des Component Finder bei groß angelegten Architekturen:
 - Aktualität: Die Architektur bleibt durch automatische Aktualisierungen stets auf dem neuesten Stand.
 
 
-### Einschränkungen und Herausforderungen der automatisierten Component-Finder-Nutzung:
+### Einschränkungen und Herausforderungen der automatisierten Component-Finder-Nutzung
 
-> Die automatische Erkennung funktioniert nur so gut, wie die Regeln, die man vorher eingestellt hat. Wenn der Programmcode keine typischen Muster verwendet, kann es passieren, dass der Component Finder wichtige Teile übersieht oder unwichtige Klassen fälschlicherweise als wichtige Komponenten erkennt.
+> Die automatische Erkennung funktioniert nur so gut, wie die Regeln, die man vorher eingestellt hat.  
+> Wenn der Programmcode keine typischen Muster verwendet, kann es passieren, dass der Component Finder wichtige Teile übersieht oder unwichtige Klassen fälschlicherweise als wichtige Komponenten erkennt.
 
-Damit die Ergebnisse wirklich genau sind, muss man oft die Einstellungen anpassen – zum Beispiel die Namensregeln überarbeiten oder eigene Filter hinzufügen. Jede Codebasis ist anders, deshalb gibt es keine Regel, die für alle Projekte perfekt passt.
+Damit die Ergebnisse wirklich genau sind, muss man oft die Einstellungen anpassen – zum Beispiel die Namensregeln überarbeiten oder eigene Filter hinzufügen.  
+Jede Codebasis ist anders, deshalb gibt es keine Regel, die für alle Projekte perfekt passt.
 
-> Handling of Custom Frameworks or Dynamic Behavior: dynamic dependency injection that isn’t visible via static analysis, the tool may not detect those components or relationships.
+---
 
-example 
+> **Handling of Custom Frameworks or Dynamic Behavior:**  
+> Dynamic dependency injection that isn’t visible via static analysis – the tool may not detect those components or relationships.
 
-> Only classes that meet the explicit matching criteria will be captured – so components instantiated via reflection or added at runtime could be missed. if you’re using a framework that the tool doesn’t have a preset strategy for (e.g. a non-Spring IoC framework or Java EE annotations), you’ll need to create custom strategies or manually annotate the code.
+**Umgang mit eigenen Frameworks oder dynamischem Verhalten:**  
+Wenn Abhängigkeiten (z. B. welche Klassen andere benutzen) erst **zur Laufzeit** festgelegt werden und **nicht direkt im Code sichtbar** sind,  
+kann das Analyse-Werkzeug diese Verbindungen oder Bausteine **nicht erkennen**.
 
-example:
-> Integrations between microservices are a special case: static code analysis might not know that Service A calls Service B’s API unless the code explicitly references it (e.g. via an HTTP client class). Often, cross-service usage is configured via URLs or service discovery, which the Component Finder cannot infer. Capturing these inter-service relationships may require manually adding relationships or using Structurizr’s annotations (e.g. an annotation in code to denote “uses Service B”) – otherwise, the automated model could omit some external interactions.
+---
 
+**Beispiel:**
 
-> Level of Detail vs. Noise: Automated scanning can produce an overwhelming level of detail if not carefully scoped. Large systems inevitably have many low-level components. Bottom line: Auto‑generated diagrams are fantastic, but curation—deciding what to leave out—is what turns them into clear architectural communication instead of an illegible code dump. //// treat only @Service & @Controller as components
+> Only classes that meet the explicit matching criteria will be captured – so components instantiated via reflection or added at runtime could be missed.  
+> If you’re using a framework that the tool doesn’t have a preset strategy for (e.g. a non-Spring IoC framework or Java EE annotations), you’ll need to create custom strategies or manually annotate the code.
 
+Nur Klassen, die **genau den festgelegten Regeln** entsprechen, werden erkannt.  
+Das bedeutet: Wenn eine Klasse **erst zur Laufzeit erstellt wird** (z. B. über Reflection) oder **nicht direkt im Code sichtbar ist**, kann das Werkzeug sie **übersehen**.
 
-In summary, automated diagramming shines in ensuring up-to-date and exhaustive documentation of a large system with minimal ongoing toil, while manual diagramming gives full control over what story the diagram tells (with the risk of becoming outdated or inconsistent). For a large microservice architecture, a purely manual approach is often impractical beyond high-level views, but a purely automated approach might overwhelm without curation. This leads to the idea of a hybrid strategy, combining the strengths of both – which we discuss next.
--> it useful but its need some changes
+Wenn du ein Framework benutzt, das das Werkzeug **nicht automatisch erkennt** (z. B. ein anderes als Spring oder spezielle Java EE-Anmerkungen), musst du:
 
+- **eigene Regeln festlegen** (also dem Tool beibringen, wie es das Framework erkennen soll),
+- oder den **Code manuell mit Anmerkungen versehen**, damit das Werkzeug die wichtigen Teile findet.
+
+---
+
+**Beispiel:**
+
+> Integrations between microservices are a special case:  
+> Static code analysis might not know that Service A calls Service B’s API unless the code explicitly references it (e.g. via an HTTP client class).  
+> Often, cross-service usage is configured via URLs or service discovery, which the Component Finder cannot infer.  
+> Capturing these inter-service relationships may require manually adding relationships or using Structurizr’s annotations (e.g. an annotation in code to denote “uses Service B”) – otherwise, the automated model could omit some external interactions.
+
+**Verbindungen zwischen Microservices sind ein besonderer Fall:**  
+Die statische Code-Analyse erkennt **nicht automatisch**, dass **Service A den Service B benutzt**, wenn das nicht **direkt im Code steht** (z. B. durch eine HTTP-Client-Klasse).
+
+Oft werden solche Verbindungen über **URLs** oder **Service Discovery** eingerichtet – das kann das Werkzeug **nicht von selbst herausfinden**.
+
+Damit solche Verbindungen trotzdem im Modell erscheinen, muss man:
+
+- sie **von Hand hinzufügen**,
+- oder den **Code mit einer speziellen Anmerkung markieren** (z. B. „verwendet Service B“).
+
+Wenn man das nicht macht, **könnten wichtige Verbindungen im Modell fehlen**.
+
+---
+
+> Auto‑generated diagrams are fantastic, but curation—deciding what to leave out—is what turns them into clear architectural communication instead of an illegible code dump.  
+> //// treat only @Service & @Controller as components
+
+**Automatisch erzeugte Diagramme sind super,**  
+aber erst die **Auswahl**, also **was man weglässt**,  
+macht daraus eine **klare und verständliche Architekturübersicht** –  
+und keinen **unlesbaren Codehaufen**.
+
+Nur Klassen mit `@Service` und `@Controller` sollen dabei als **echte Komponenten** behandelt werden.
+
+---
+
+### Zusammenfassend
+
+Automatisch erzeugte Diagramme sind besonders nützlich,  
+um eine **aktuelle und vollständige Dokumentation** eines großen Systems mit **wenig Aufwand** zu gewährleisten.
+
+Manuell erstellte Diagramme bieten dagegen die Möglichkeit,  
+**genau zu steuern**, welche Informationen gezeigt werden –  
+allerdings besteht das Risiko, dass sie **veraltet oder ungenau** werden.
+
+In einer großen Microservice-Architektur ist ein **rein manueller Ansatz** oft nicht praktikabel,  
+außer für sehr **grobe Übersichten**.
+
+Ein **vollautomatischer Ansatz** kann dagegen **überfordern**,  
+wenn man nicht gezielt **filtert und aufräumt**.
+
+**Deshalb ist eine Mischstrategie sinnvoll:**  
+Sie **verbindet die Vorteile beider Methoden** – automatisch und aktuell, aber dennoch klar und verständlich.
+
+**Wie das konkret aussehen kann, besprechen wir im nächsten Abschnitt.**
+
+---
 sloution : 
 
 > Use Automation for the Baseline, then Refine Manually: Let the Structurizr Component Finder do the heavy lifting by initially populating the model from code. This gives you a thorough baseline of containers, components, and their interconnections. Next, invest time in manual refinement: add any missing context (descriptions, external dependencies, etc.) and remove or de-emphasize extraneous details. For instance, after using the Spring finder, you might attach meaningful descriptions to each component (since the code annotations won’t supply descriptions)​
