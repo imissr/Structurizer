@@ -265,24 +265,7 @@ Sie **verbindet die Vorteile beider Methoden** – automatisch und aktuell, aber
 
 
 ---
-sloution : 
 
-> Use Automation for the Baseline, then Refine Manually: Let the Structurizr Component Finder do the heavy lifting by initially populating the model from code. This gives you a thorough baseline of containers, components, and their interconnections. Next, invest time in manual refinement: add any missing context (descriptions, external dependencies, etc.) and remove or de-emphasize extraneous details. For instance, after using the Spring finder, you might attach meaningful descriptions to each component (since the code annotations won’t supply descriptions)​
-codecentric.de. You might also decide to hide certain utility components that aren’t architecturally significant. The automated output should be the starting point, not the final product – review and adjust it so the diagrams communicate effectively. In practice, teams often iterate: generate, review, and tweak the model (maybe adjusting finder rules or post-processing the model) until the diagrams align with what architects want to convey.
-
-> Know When to Rely on Automation vs. Manual Effort: Not every aspect of the architecture needs to be generated from code. Assess the parts of your system that change frequently and are tedious to document manually. 
-nternal component structures of dozens of services fit this description (they evolve with code, and manual updates would be onerous), so automate those
-. On the other hand, high-level relationships and conceptual views might be better crafted manually.
-
-example : 
-For example, defining the set of software systems and high-level containers in your enterprise, or illustrating an abstract data flow, could be done manually since they benefit from human design and don’t change as often
-
-
->Hybrid Modeling Approach:
-mbrace a hybrid approach where automated and manual modeling co-exist. You might automatically generate each microservice’s component list, but still manually define the interactions between microservices. For instance, use Component Finder inside each container to find its components, but manually add the relationships between Containers (since you know service A calls service B’s API, even if that isn’t obvious via code)
-
-
-- Structurizer suggests to have a separate workspace.dsl file per software system which extends from the overall landscape workspace defintion.
 
 
 ## make the C4 diagrams “self‑updating” whenever a new Spring @Controller (or @RestController) is introduced  ?
