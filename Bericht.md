@@ -234,15 +234,13 @@ Wenn man das nicht macht, **könnten wichtige Verbindungen im Modell fehlen**.
 
 ---
 
-> Auto‑generated diagrams are fantastic, but curation—deciding what to leave out—is what turns them into clear architectural communication instead of an illegible code dump.  
-> //// treat only @Service & @Controller as components
-
 **Automatisch erzeugte Diagramme sind super,**  
 aber erst die **Auswahl**, also **was man weglässt**,  
 macht daraus eine **klare und verständliche Architekturübersicht** –  
 und keinen **unlesbaren Codehaufen**.
 
 Nur Klassen mit `@Service` und `@Controller` sollen dabei als **echte Komponenten** behandelt werden.
+> //// treat only @Service & @Controller as components
 
 ---
 
