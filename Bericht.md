@@ -190,6 +190,7 @@ Jede Codebasis ist anders, deshalb gibt es keine Regel, die für alle Projekte p
 
 > **Handling of Custom Frameworks or Dynamic Behavior:**  
 > Dynamic dependency injection that isn’t visible via static analysis – the tool may not detect those components or relationships.
+> [source](https://stackoverflow.com/questions/3632110/determining-missing-dependencies-statically-when-using-dependency-injection-cont)
 
 **Umgang mit eigenen Frameworks oder dynamischem Verhalten:**  
 Wenn Abhängigkeiten (z. B. welche Klassen andere benutzen) erst **zur Laufzeit** festgelegt werden und **nicht direkt im Code sichtbar** sind,  
