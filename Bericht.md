@@ -263,7 +263,6 @@ wenn man nicht gezielt **filtert und aufräumt**.
 **Deshalb ist eine Mischstrategie sinnvoll:**  
 Sie **verbindet die Vorteile beider Methoden** – automatisch und aktuell, aber dennoch klar und verständlich.
 
-**Wie das konkret aussehen kann, besprechen wir im nächsten Abschnitt.**
 
 ---
 sloution : 
