@@ -244,7 +244,17 @@ Nur Klassen mit `@Service` und `@Controller` sollen dabei als **echte Komponente
 
 ---
 
-### Zusammenfassend
+## is it possable to use other software with structurizer component fider to enhance component finding
+
+this is also a possable way i think there is so many tools that we can use for java spring project thats do a static analysis on the code. annother idea that i had, is using dynamic code analysis tools to detect the component and to see if that over all possiable ? 
+
+tools we could use ArchUnit:
+
+ArchUnit is a free, simple and extensible library for checking the architecture of your Java code using any plain Java unit test framework. That is, ArchUnit can check dependencies between packages and classes, layers and slices, check for cyclic dependencies and more. It does so by analyzing given Java bytecode, importing all classes into a Java code structure. [source](https://www.archunit.org/)
+
+Integration with Structurizr: One possiable way i  think of  to integrate ArchUnit is by using it to generate or verify architecture models programmatically. For example, you could define ArchUnit rules that group classes into components (by package or annotation) and check allowed dependencies. These rules won’t directly create Structurizr models, but they ensure the code’s structure aligns with your C4 model. 
+
+## Zusammenfassend
 
 Automatisch erzeugte Diagramme sind besonders nützlich,  
 um eine **aktuelle und vollständige Dokumentation** eines großen Systems mit **wenig Aufwand** zu gewährleisten.
