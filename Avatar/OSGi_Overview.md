@@ -96,3 +96,4 @@ OSGi is particularly useful for:
 - Applications with plugin architectures
 - IoT and embedded systems
 - Integration platforms needing to manage multiple services
+
