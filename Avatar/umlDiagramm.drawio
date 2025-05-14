@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.3.0">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2383" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2717" dy="1353" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -63,7 +63,7 @@
             <mxRectangle x="-370" y="440" width="180" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djY0cKDpvmUm5j8Hwuhj-6" value="connector.model" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-6" value="connector.model Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-760" y="880" width="668" height="3040" as="geometry">
             <mxRectangle x="-760" y="560" width="130" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -225,8 +225,8 @@
             <mxPoint x="307" y="3140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djY0cKDpvmUm5j8Hwuhj-106" value="connector.other" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="134" y="430" width="556" height="410" as="geometry" />
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-106" value="connector.other Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="90" y="460" width="556" height="410" as="geometry" />
         </mxCell>
         <mxCell id="djY0cKDpvmUm5j8Hwuhj-114" value="@Component" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-106">
           <mxGeometry x="60" y="100" width="320" height="230" as="geometry" />
@@ -248,7 +248,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djY0cKDpvmUm5j8Hwuhj-120" value="connector.Whiteboard" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-120" value="connector.Whiteboard Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-821" y="430" width="790" height="390" as="geometry" />
         </mxCell>
         <mxCell id="djY0cKDpvmUm5j8Hwuhj-125" value="&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;div&gt;AvatarConnectorInfo&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillStyle=auto;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-120">
@@ -278,6 +278,84 @@
           <mxGeometry x="-0.8153" y="27" width="80" relative="1" as="geometry">
             <mxPoint x="279" y="204" as="sourcePoint" />
             <mxPoint x="373" y="230" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-140" value="connector.emf Container" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-10" y="1390" width="560" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-144" value="EcoreSerializer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-140">
+          <mxGeometry x="65" y="30" width="430" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-145" value="- soResourceSet:ComponentServiceobjects&lt;div&gt;- resourceSet:ResourceSet&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-144">
+          <mxGeometry y="26" width="430" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-146" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-144">
+          <mxGeometry y="120" width="430" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-147" value="+ EcoreSeralizer(ComponentServiceObjects&amp;lt;ResourceSet&amp;gt;,Bundle)&lt;div&gt;+ serializArgs(ByteBuf,Object[]):Void&lt;/div&gt;&lt;div&gt;+ deserializeArgs(ByteBuf):Object[]&lt;/div&gt;&lt;div&gt;+ serializeReturn(ByteBuf,Object[]):Void&lt;/div&gt;&lt;div&gt;&lt;div&gt;+ derserializeReturn(ByteBuf):Object[]&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ dispose():Void&lt;/div&gt;&lt;div&gt;+ creatRsaobject(Object ,EClass): static&amp;lt;T extends RsaObject&amp;gt; T&lt;/div&gt;&lt;div&gt;+ getObject(RsaObject): Static Object&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-144">
+          <mxGeometry y="128" width="430" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-153" value="EcoreSerializerFactory" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-140">
+          <mxGeometry x="75" y="310" width="410" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-154" value="- soResourceSet:ComponentServiceobjects&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-153">
+          <mxGeometry y="26" width="410" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-155" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-153">
+          <mxGeometry y="70" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-156" value="+&amp;nbsp;&lt;span style=&quot;font-weight: 700; text-align: center;&quot;&gt;EcoreSerializerFactory&lt;/span&gt;(ComponentServiceObjects&amp;lt;ResourceSet&amp;gt;)&lt;div&gt;+ create(Bundle):Serializer&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-153">
+          <mxGeometry y="78" width="410" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-159" value="EcoreSerializerFactoryProvider @Component" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-140">
+          <mxGeometry x="65" y="480" width="410" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-160" value="- soResourceSet:ComponentServiceobjects @Refrence&lt;div&gt;- acPackage:AConnectorPackage @Refremce&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-159">
+          <mxGeometry y="26" width="410" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-161" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-159">
+          <mxGeometry y="70" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-162" value="&lt;div&gt;&lt;div&gt;+ createFormString(String):SerializerFactory&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ create(SerializationType):SerializerFactory&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="djY0cKDpvmUm5j8Hwuhj-159">
+          <mxGeometry y="78" width="410" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-151" value="dosgi.net.serialize.Serializer" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="694" y="1450" width="240" height="100" as="geometry">
+            <mxRectangle x="-370" y="440" width="180" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-152" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Implements&lt;/blockquote&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="djY0cKDpvmUm5j8Hwuhj-145" target="djY0cKDpvmUm5j8Hwuhj-151">
+          <mxGeometry x="-0.0003" y="28" width="80" relative="1" as="geometry">
+            <mxPoint x="287" y="1170" as="sourcePoint" />
+            <mxPoint x="660" y="1450" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-157" value="dosgi.net.serialize.SerializerFactory" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="694" y="1698" width="240" height="100" as="geometry">
+            <mxRectangle x="-370" y="440" width="180" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-158" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Implements&lt;/blockquote&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="djY0cKDpvmUm5j8Hwuhj-154" target="djY0cKDpvmUm5j8Hwuhj-157">
+          <mxGeometry x="-0.0003" y="28" width="80" relative="1" as="geometry">
+            <mxPoint x="475" y="1770" as="sourcePoint" />
+            <mxPoint x="670" y="1740" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-163" value="dosgi.net.serialize.SerializerFactoryProvider" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="680" y="1868" width="270" height="100" as="geometry">
+            <mxRectangle x="-370" y="440" width="180" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="djY0cKDpvmUm5j8Hwuhj-164" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Implements&lt;/blockquote&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="djY0cKDpvmUm5j8Hwuhj-160" target="djY0cKDpvmUm5j8Hwuhj-163">
+          <mxGeometry x="0.0077" y="19" width="80" relative="1" as="geometry">
+            <mxPoint x="475" y="1918" as="sourcePoint" />
+            <mxPoint x="680" y="1900" as="targetPoint" />
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
