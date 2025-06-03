@@ -124,6 +124,61 @@ private static void scanAllModelsByProviderType(Container container, File path) 
 }
 ```
 
+another way is :`to use nameSuffix ->because most entity has those keyword we can use them to identify the component
+->its possiable to identfiy the name of class added and added to the list of suffix
+```java
+
+	// Able to find all components in the specified base path
+	private static void tryScanningForComponents(Container container1, Container container3 ,String basePath , String basePath2 ) {
+		File path = new File(basePath);
+		if (!path.exists()) {
+			System.out.println("Warning: Path " + basePath + " doesn't exist. Skipping component scanning.");
+			return;
+		}
+
+		try {
+			System.out.println("Attempting to scan for components in: " + basePath);
+
+			//Find components by suffix
+			List<String> suffixes = List.of("Info", "Request", "Response", "Result", "Endpoint" , "Whiteboard", "Serializer", "Connector", "Implementation", "Infrastructure");
+			for (String suffix : suffixes) {
+				tryScanningBySuffix(container, path, suffix);
+			}*
+
+
+
+		} catch (Exception e) {
+			System.out.println("Component scanning failed: " + e.getMessage());
+		}
+	}
+
+    	//possible way is to search after classes suffixes like "Info", "Request", "Response", "Result", "Endpoint"
+	// this way we can find all components that are in the model
+	private static void tryScanningBySuffix(Container container, File path, String suffix) {
+		try {
+			ComponentFinder finder = new ComponentFinderBuilder()
+				.forContainer(container)
+				.fromClasses(path)
+				.withStrategy(
+					new ComponentFinderStrategyBuilder()
+						.matchedBy(new NameSuffixTypeMatcher(suffix))
+						.withTechnology("EMF Model")
+						.forEach(component -> {
+							component.addTags(suffix);
+							System.out.println("Found component by suffix: " + component.getName());
+						})
+						.build()
+				)
+				.build();
+
+			finder.run();
+			System.out.println("Successfully found components with suffix: " + suffix);
+		} catch (Exception e) {
+			System.out.println("No components found with suffix: " + suffix + " - " + e.getMessage());
+		}
+	}
+    ``
+
 ### Identifying `ConnectorImpl` Container
 
 ```java
